@@ -48,7 +48,7 @@ public class ProtocolVersionDetector {
                 .timeout(TIMEOUT, TIMEOUT)
                 .getSync();
 
-        if (response.version.protocol == clientVersion.getOriginalVersion()) { // If the server is on the same version as the client, we can just connect
+        if (false) { // If the server is on the same version as the client, we can just connect
             return clientVersion;
         } else { // Else ping again with protocol id -1 to get the protocol id of the server
             response = MCPing
